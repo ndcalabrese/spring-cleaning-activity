@@ -1,3 +1,28 @@
+/* First Step: create a new database */
+CREATE DATABASE IF NOT EXISTS shirts_db;
+USE shirts_db;
+
+/* Second Step: create a new table */
+CREATE TABLE shirts (
+shirt_id int NOT NULL AUTO_INCREMENT,
+article varchar(45),
+color varchar(45),
+shirt_size varchar(10),
+last_worn int,
+PRIMARY KEY (`shirt_id`)
+);
+
+/* Third Step: Populate the table with the following data */
+INSERT INTO `shirts` VALUES 
+(1,'t-shirt','white','S',10),
+(2,'t-shirt','green','S',200),
+(3,'polo shirt','black','M',10),
+(4,'tank top','blue','S',50),
+(5,'t-shirt','pink','S',0),
+(6,'polo shirt','red','M',5),
+(7,'tank top','white','S',200),
+(8,'tank top','blue','M',15);
+
 /* TURN SAFE UPDATES OFF */
 SET SQL_SAFE_UPDATES=0;
 
